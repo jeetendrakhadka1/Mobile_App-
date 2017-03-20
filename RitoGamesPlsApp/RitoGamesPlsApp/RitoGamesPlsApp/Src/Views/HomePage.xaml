@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RitoGamesPlsApp.Src.Views.HomePage">
+  <StackLayout BackgroundColor ="Yellow">
+    <Label Text="Welcome to 383_MobileApp_Xamarin.forms"
+           VerticalOptions="Center"
+         HorizontalOptions="Center" />
+
+    <SearchBar Placeholder="Search Summoner" TextChanged="Handle_TextChanged" /> 
+    
+    <ListView x:Name ="listView" ItemSelected="Handle_ItemSelected">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <TextCell  Text ="{Binding name}"/> 
+      </DataTemplate>
+    </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>
